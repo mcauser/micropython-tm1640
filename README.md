@@ -14,7 +14,7 @@ $ ampy put tm1640.py
 
 **Basic usage**
 
-```
+```python
 import tm1640
 from machine import Pin
 tm = tm1640.TM1640(clk=Pin(14), dio=Pin(13))
@@ -72,3 +72,7 @@ G             | GND
 * [Titan Micro TM1640 product page](http://www.titanmec.com/index.php/en/project/view/id/305.html)
 * [MicroPython framebuf](http://docs.micropython.org/en/latest/esp8266/library/framebuf.html)
 * [Adafruit Ampy](https://learn.adafruit.com/micropython-basics-load-files-and-run-code/install-ampy)
+
+## License
+
+Licensed under the [MIT License](http://opensource.org/licenses/MIT).

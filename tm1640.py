@@ -1,4 +1,28 @@
-# MicroPython TM1640 LED matrix display driver
+"""
+MicroPython TM1640 LED matrix display driver
+https://github.com/mcauser/micropython-tm1640
+
+MIT License
+Copyright (c) 2017 Mike Causer
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"""
 
 from micropython import const
 from machine import Pin
@@ -7,7 +31,7 @@ from time import sleep_us
 TM1640_CMD1 = const(64)  # 0x40 data command
 TM1640_CMD2 = const(192) # 0xC0 address command
 TM1640_CMD3 = const(128) # 0x80 display control command
-TM1640_DSP_ON = const(8) # 0x08 display on 
+TM1640_DSP_ON = const(8) # 0x08 display on
 TM1640_DELAY = const(10) # 10us delay between clk/dio pulses
 
 class TM1640(object):
