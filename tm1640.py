@@ -3,7 +3,7 @@ MicroPython TM1640 LED matrix display driver
 https://github.com/mcauser/micropython-tm1640
 
 MIT License
-Copyright (c) 2017 Mike Causer
+Copyright (c) 2017-2023 Mike Causer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,6 +27,8 @@ SOFTWARE.
 from micropython import const
 from machine import Pin
 from time import sleep_us
+
+__version__ = '1.0.0'
 
 TM1640_CMD1 = const(64)  # 0x40 data command
 TM1640_CMD2 = const(192) # 0xC0 address command

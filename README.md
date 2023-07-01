@@ -1,16 +1,29 @@
 # MicroPython TM1640 LED Matrix
 
-A MicroPython library for a LED matrix using the TM1740 LED driver.
+A MicroPython library for a LED matrix modules using the TM1740 LED driver.
 
 ![demo](docs/demo.jpg)
 
+## Installation
+
+Using mip via mpremote:
+
+```bash
+$ mpremote mip install github:mcauser/micropython-tm1640
+```
+
+Using mip directly on a WiFi capable board:
+
+```python
+>>> import mip
+>>> mip.install("github:mcauser/micropython-tm1640")
+```
+
+Manual installation:
+
+Copy `tm1640.py` to the root directory of your device.
+
 ## Examples
-
-Copy the file to your device, using ampy, webrepl or compiling and deploying. eg.
-
-```
-$ ampy put tm1640.py
-```
 
 **Basic usage**
 
@@ -49,29 +62,31 @@ tm.write_int(0x55aa55aa55aa55aa)
 
 For more detailed examples, see ![tm1640_test.py](tm1640_test.py)
 
-## Parts
+## Modules
 
-* [WeMos D1 Mini](https://www.aliexpress.com/store/product/D1-mini-Mini-NodeMcu-4M-bytes-Lua-WIFI-Internet-of-Things-development-board-based-ESP8266/1331105_32529101036.html) $3.50 USD
-* [Clone DIY More WeMos Matrix LED Shield](https://www.aliexpress.com/item/Matrix-LED-Shield-V1-0-0-For-WEMOS-D1-Mini-Digital-Signal-Output-Module-8-X/32821752799.html) $1.35 USD
-* [Dual Base for WeMos D1 Mini](https://www.aliexpress.com/store/product/Dual-Base-for-WeMos-D1-mini/1331105_32642733925.html) $1.00 USD
+* [WeMos D1 Mini](https://www.aliexpress.com/item/32529101036.html)
+* [WeMos Matrix LED Shield](https://www.aliexpress.com/item/32812932291.html)
+* [DIY More MatrixLED Shield for D1 Mini](https://www.aliexpress.com/item/32821752799.html)
+* [Dual Base for WeMos D1 Mini](https://www.aliexpress.com/item/32642733925.html)
 
 ## Connections
 
-WeMos D1 Mini | TM1640 LED Matrix
-------------- | -----------------
-D5 (GPIO14)   | CLK
-D7 (GPIO13)   | DIO
-3V3 (or 5V)   | VCC
-G             | GND
+`CLK` and `DIO` are bit-banged. You can use any GPIO.
+
+TM1640 LED Matrix | WeMos D1 Mini
+----------------- | -------------
+CLK               | D5 (GPIO14)
+DIO               | D7 (GPIO13)
+VCC               | 3V3/5V
+GND               | G
 
 ## Links
 
-* [WeMos D1 Mini](https://wiki.wemos.cc/products:d1:d1_mini)
+* [WeMos D1 Mini](https://www.wemos.cc/en/latest/d1/index.html)
 * [micropython.org](http://micropython.org)
 * [TM1640 datasheet](http://www.titanmic.com/pic/other/2014-11-20-15-36-028.pdf)
 * [Titan Micro TM1640 product page](http://www.titanmec.com/index.php/en/project/view/id/305.html)
 * [MicroPython framebuf](http://docs.micropython.org/en/latest/esp8266/library/framebuf.html)
-* [Adafruit Ampy](https://learn.adafruit.com/micropython-basics-load-files-and-run-code/install-ampy)
 
 ## License
 

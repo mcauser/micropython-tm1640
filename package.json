@@ -1,0 +1,6 @@
+{
+  "urls": [
+    ["tm1640.py", "github:mcauser/micropython-tm1640/tm1640.py"]
+  ],
+  "version": "1.0.0"
+}
